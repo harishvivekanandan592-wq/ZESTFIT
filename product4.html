@@ -88,5 +88,21 @@
   </div>
 
   <footer><strong>ZESTFIT</strong><br/>&copy; 2025 ZestFit Fashion. All rights reserved.</footer>
+  <script>
+function addToCart() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const product = {
+    name: "Sunny Bloom Sundress",
+    price: 1999
+  };
+
+  cart.push(product);
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert("Added to cart!");
+}
+</script>
 </body>
 </html>
